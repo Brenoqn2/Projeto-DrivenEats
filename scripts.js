@@ -1,3 +1,9 @@
+var countPrato = 0;
+var countBebida = 0;
+var countSobremesa = 0;
+var countPedido = 0;
+
+
 function selecionarPrato(clicked_id){
     tirarSelecionadoPrato();
     document.getElementById(clicked_id).style.boxShadow = "0px 0px 0px 5px #32B72F";
@@ -6,6 +12,8 @@ function selecionarPrato(clicked_id){
     check.setAttribute("id","checkmarkid")
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
+    countPrato ++;
+    finalizarPedido();
 }
 
 function selecionarBebida(clicked_id){
@@ -16,6 +24,8 @@ function selecionarBebida(clicked_id){
     check.setAttribute("id","checkmarkid")
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
+    countBebida++;
+    finalizarPedido();
 }
 
 function selecionarSobremesa(clicked_id){
@@ -26,6 +36,8 @@ function selecionarSobremesa(clicked_id){
     check.setAttribute("id","checkmarkid")
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
+    countSobremesa++;
+    finalizarPedido();
 }
 
 function tirarSelecionadoPrato(){
@@ -61,4 +73,18 @@ function tirarCheckMark(){
         check_Mark.remove();
     } 
     catch (e){};
+}
+
+function finalizarPedido(){
+    if (countPrato >= 1 && countBebida >=1 && countSobremesa >=1 && countPedido == 0) {
+        let botaoInferior = document.getElementById("botaoInferior");
+        let texto = document.getElementById("textoInicial");
+        texto.remove();
+        let tagP = document.createElement("p");
+        let textoFinal = document.createTextNode("Fechar pedido")
+        tagP.appendChild(textoFinal);
+        botaoInferior.appendChild(tagP);
+        botaoInferior.style.backgroundColor = "#32B72F";
+        countPedido ++;
+    }
 }
