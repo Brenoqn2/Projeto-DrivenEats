@@ -191,3 +191,6 @@ h5{
     color:#32B72F;
 }
 
+.botao:hover{
+    cursor:pointer;
+}

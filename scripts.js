@@ -3,6 +3,9 @@ var countBebida = 0;
 var countSobremesa = 0;
 var countPedido = 0;
 
+var pratoEscolhido ='';
+var bebidaEscolhida = '';
+var sobremesaEscolhida = '';
 
 function selecionarPrato(clicked_id){
     tirarSelecionadoPrato();
@@ -13,6 +16,7 @@ function selecionarPrato(clicked_id){
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
     countPrato ++;
+    pratoEscolhido=clicked_id;
     finalizarPedido();
 }
 
@@ -25,6 +29,7 @@ function selecionarBebida(clicked_id){
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
     countBebida++;
+    bebidaEscolhida=clicked_id;
     finalizarPedido();
 }
 
@@ -37,6 +42,7 @@ function selecionarSobremesa(clicked_id){
     check.setAttribute("class","checkmark")
     document.getElementById(clicked_id).appendChild(check);
     countSobremesa++;
+    sobremesaEscolhida=clicked_id;
     finalizarPedido();
 }
 
@@ -85,6 +91,50 @@ function finalizarPedido(){
         tagP.appendChild(textoFinal);
         botaoInferior.appendChild(tagP);
         botaoInferior.style.backgroundColor = "#32B72F";
+        botaoInferior.setAttribute("class","botao");
         countPedido ++;
     }
 }
+
+function fecharPedido(){
+    if (countPedido == 0){}
+    
+    else{
+        let precoBebida = 'preço' + bebidaEscolhida; 
+        let precoPrato = 'preço' + pratoEscolhido;
+        let precoSobremesa = 'preço' + sobremesaEscolhida;
+        precoBebida = document.getElementById(precoBebida).textContent;
+        precoBebida = precoBebida.split(" ").pop();
+        precoBebida =  parseFloat(precoBebida.replace(',','.'));
+
+        precoPrato = document.getElementById(precoPrato).textContent;
+        precoPrato = precoPrato.split(" ").pop();
+        precoPrato =  parseFloat(precoPrato.replace(',','.'));
+
+        precoSobremesa = document.getElementById(precoSobremesa).textContent;
+        precoSobremesa = precoSobremesa.split(" ").pop();
+        precoSobremesa =  parseFloat(precoSobremesa.replace(',','.'));
+
+        let precoFinal =  precoBebida + precoPrato + precoSobremesa;
+        precoFinal = precoFinal.toFixed(2);
+         
+        let bebidaFinal = 'nome' + bebidaEscolhida;
+        bebidaFinal = document.getElementById(bebidaFinal).textContent;
+        let pratoFinal = 'nome' + pratoEscolhido;
+        pratoFinal = document.getElementById(pratoFinal).textContent;
+        let sobremesaFinal = 'nome' + sobremesaEscolhida;
+        sobremesaFinal = document.getElementById(sobremesaFinal).textContent;
+
+        let mensagemPronta =  "Olá, gostaria de fazer o pedido:\n- Prato: "+ pratoFinal + "\n- Bebida: " + bebidaFinal + "\n- Sobremesa: "+ sobremesaFinal + "\nTotal: R$ " + precoFinal;
+
+        mensagemPronta = encodeURIComponent(mensagemPronta); 
+
+        var link = "https://wa.me/5521964406513?text="
+
+        link = link+mensagemPronta;
+
+        linkBotao = document.getElementById("linkWhatsapp");
+        linkBotao.setAttribute("href",link);
+    }
+}
+    
