@@ -125,13 +125,33 @@
         </div>
 
         <div class="barra-inferior">
-            <a href="" target="_blank" id="linkWhatsapp">
-                <div id = "botaoInferior" onclick="fecharPedido()">
-                    <p id="textoInicial">
+            <div id = "botaoInferior" onclick="fecharPedido()">
+                <p id="textoInicial">
                         Selecione os 3 itens <br> para fechar o pedido
-                    </p>
-                </div>
-            </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="off" id="confirmarDados">
+            <div class="box-confirmar">
+                <h6>Confirme seu pedido</h6>
+                <p id="nomePratoConfirma">Frango Yin Yang</p>
+                <p id="precoPratoConfirma">14,90</p>
+                <p id="nomeBebidaConfirma">Coquinha gelada</p>
+                <p id="precoBebidaConfirma">4,90</p>
+                <p id="nomeSobremesaConfirma">Pudim</p>
+                <p id="precoSobremesaConfirma">7,90</p>
+                <h6 id="total">TOTAL</h6>
+                <h6 id="precoTotal">R$ 27,70</h6>
+                <a href="" target="_blank" id="linkWhatsapp">
+                    <div class="botaoConfirmaDados">
+                        <h6>Tudo certo, pode pedir!</h6>
+                    </div>
+                </a>
+                <h6 id="cancelar" onclick="cancelarConfirmarDados()">Cancelar</h6>
+
+            </div>
+
         </div>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>

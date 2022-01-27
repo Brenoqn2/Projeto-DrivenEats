@@ -7,6 +7,8 @@ var pratoEscolhido ='';
 var bebidaEscolhida = '';
 var sobremesaEscolhida = '';
 
+var pratoFinal ='';
+
 function selecionarPrato(clicked_id){
     tirarSelecionadoPrato();
     document.getElementById(clicked_id).style.boxShadow = "0px 0px 0px 5px #32B72F";
@@ -100,9 +102,9 @@ function fecharPedido(){
     if (countPedido == 0){}
     
     else{
-        let precoBebida = 'preço' + bebidaEscolhida; 
-        let precoPrato = 'preço' + pratoEscolhido;
-        let precoSobremesa = 'preço' + sobremesaEscolhida;
+        var precoBebida = 'preço' + bebidaEscolhida; 
+        var precoPrato = 'preço' + pratoEscolhido;
+        var precoSobremesa = 'preço' + sobremesaEscolhida;
         precoBebida = document.getElementById(precoBebida).textContent;
         precoBebida = precoBebida.split(" ").pop();
         precoBebida =  parseFloat(precoBebida.replace(',','.'));
@@ -115,20 +117,24 @@ function fecharPedido(){
         precoSobremesa = precoSobremesa.split(" ").pop();
         precoSobremesa =  parseFloat(precoSobremesa.replace(',','.'));
 
-        let precoFinal =  precoBebida + precoPrato + precoSobremesa;
+        var precoFinal =  precoBebida + precoPrato + precoSobremesa;
         precoFinal = precoFinal.toFixed(2);
+        precoBebida = precoBebida.toFixed(2);
+        precoPrato = precoPrato.toFixed(2);
+        precoSobremesa = precoSobremesa.toFixed(2);
+
          
-        let bebidaFinal = 'nome' + bebidaEscolhida;
+        var bebidaFinal = 'nome' + bebidaEscolhida;
         bebidaFinal = document.getElementById(bebidaFinal).textContent;
-        let pratoFinal = 'nome' + pratoEscolhido;
+        var pratoFinal = 'nome' + pratoEscolhido;
         pratoFinal = document.getElementById(pratoFinal).textContent;
-        let sobremesaFinal = 'nome' + sobremesaEscolhida;
+        var sobremesaFinal = 'nome' + sobremesaEscolhida;
         sobremesaFinal = document.getElementById(sobremesaFinal).textContent;
 
-        let mensagemPronta =  "Olá, gostaria de fazer o pedido:\n- Prato: "+ pratoFinal + "\n- Bebida: " + bebidaFinal + "\n- Sobremesa: "+ sobremesaFinal + "\nTotal: R$ " + precoFinal;
+        var mensagemPronta =  "Olá, gostaria de fazer o pedido:\n- Prato: "+ pratoFinal + "\n- Bebida: " + bebidaFinal + "\n- Sobremesa: "+ sobremesaFinal + "\nTotal: R$ " + precoFinal;
 
-        let nomeCliente = prompt("Qual o seu nome?");
-        let enderecoCliente = prompt("Qual seu endereço?");
+        var nomeCliente = prompt("Qual o seu nome?");
+        var enderecoCliente = prompt("Qual seu endereço?");
 
         mensagemPronta = mensagemPronta + "\n \nNome: " + nomeCliente +"\nEndereço: " + enderecoCliente 
 
@@ -140,6 +146,22 @@ function fecharPedido(){
 
         linkBotao = document.getElementById("linkWhatsapp");
         linkBotao.setAttribute("href",link);
+
+        document.getElementById("nomePratoConfirma").innerHTML = pratoFinal
+        document.getElementById("precoPratoConfirma").innerHTML = precoPrato
+        document.getElementById("nomeBebidaConfirma").innerHTML = bebidaFinal
+        document.getElementById("precoBebidaConfirma").innerHTML = precoBebida
+        document.getElementById("nomeSobremesaConfirma").innerHTML = sobremesaFinal;
+        document.getElementById("precoSobremesaConfirma").innerHTML = precoSobremesa;
+        document.getElementById("precoTotal").innerHTML = "R$ " + precoFinal;
+    
+        let  div = document.getElementById("confirmarDados");
+        div.setAttribute("class","on");
     }
+}
+
+function cancelarConfirmarDados(){
+    let  div = document.getElementById("confirmarDados");
+    div.setAttribute("class","off");
 }
     

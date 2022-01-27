@@ -194,3 +194,131 @@ h5{
 .botao:hover{
     cursor:pointer;
 }
+
+#confirmarDados{
+    width:100vw;
+    height:100vh;
+    background-color:rgba(255, 255, 255, 0.9);
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:3;
+}
+
+.box-confirmar{
+    width:377px;
+    height:353px;
+    background-color: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius:9px;
+    position:absolute;
+    top:calc(50% - 353px/2);
+    left:calc(50% - 377px/2);
+}
+
+.box-confirmar p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    position:absolute;
+}
+
+.box-confirmar h6{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    position:absolute;
+}
+
+.box-confirmar > h6:first-child{
+    top: 25px;
+    left: 75px;
+}
+
+#nomePratoConfirma{
+    top:76px;
+    left:26px;
+}
+
+#precoPratoConfirma{
+    top:76px;
+    right:26px;
+}
+
+#nomeBebidaConfirma{
+    top:116px;
+    left:26px;
+}
+
+#precoBebidaConfirma{
+    top:116px;
+    right:26px;
+}
+
+#nomeSobremesaConfirma{
+    top:156px;
+    left:26px;
+}
+
+#precoSobremesaConfirma{
+    top:156px;
+    right:26px;
+}
+
+#total{
+    top:196px;
+    left:26px;
+}
+
+#precoTotal{
+    top:196px;
+    right:26px;
+}
+
+#cancelar{
+    top:310px;
+    left: calc(50% - 91.34px/2);
+}
+
+#cancelar:hover{
+    cursor:pointer;
+}
+.botaoConfirmaDados{
+    position:absolute;
+    width: 329px;
+    height: 52px;
+    top:247px;
+    left:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:100px;
+    background-color:#FFFFFF;
+}
+
+.botaoConfirmaDados:hover{
+    cursor:pointer;
+}
+
+.botaoConfirmaDados h6{
+    color:#50D074;
+}
+
+
+
+.on{
+    display: default;
+}
+
+.off{
+    display:none;
+    
+}
