@@ -127,6 +127,11 @@ function fecharPedido(){
 
         let mensagemPronta =  "Olá, gostaria de fazer o pedido:\n- Prato: "+ pratoFinal + "\n- Bebida: " + bebidaFinal + "\n- Sobremesa: "+ sobremesaFinal + "\nTotal: R$ " + precoFinal;
 
+        let nomeCliente = prompt("Qual o seu nome?");
+        let enderecoCliente = prompt("Qual seu endereço?");
+
+        mensagemPronta = mensagemPronta + "\n \nNome: " + nomeCliente +"\nEndereço: " + enderecoCliente 
+
         mensagemPronta = encodeURIComponent(mensagemPronta); 
 
         var link = "https://wa.me/5521964406513?text="
