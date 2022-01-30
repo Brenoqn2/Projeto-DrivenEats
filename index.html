@@ -17,36 +17,36 @@
         <div class="pratos">
             <h3>Primeiro, seu prato</h3>
             <div class="opcoes" data-identifier="dishes" id="opcoesPratos">
-                    <div class="opcao primeiro" id="prato1" onclick="selecionarPrato(this.id)">
-                        <img src="imagens/frango_yin_yang 1.png"/>
-                        <h4 id="nomeprato1">Frango Yin Yang</h4>
-                        <div><p>Um pouco de batata, um poudo de salada</p></div>
-                        <h5 id="preçoprato1">R$ 14,90</h5>
-                    </div>
+                <div class="opcao primeiro prato" onclick="selecionar(this,this.id)" id="prato1" data-identifier="food-option">
+                    <img src="imagens/almondegas.jpeg"/>
+                    <h4 id="nomeprato1" data-identifier="food-title">Almôndega</h4>
+                    <div><p>Almôndegas de carne, acompanha arroz.</p></div>
+                    <h5 id="preçoprato1" data-identifier="food-price">R$ 20,90</h5>
+                 </div>
 
-                <div class="opcao" id="prato2" onclick="selecionarPrato(this.id)">
+                <div class="opcao prato" onclick="selecionar(this)" id="prato2" data-identifier="food-option">
                     <img src="imagens/frango_yin_yang 1.png"/>
-                    <h4 id="nomeprato2">Frango Yin Yang</h4>
+                    <h4 id="nomeprato2" data-identifier="food-title">Frango Yin Yang</h4>
                     <div><p>Um pouco de batata, um poudo de salada</p></div>
-                    <h5 id="preçoprato2">R$ 14,90</h5>
+                    <h5 id="preçoprato2" data-identifier="food-price">R$ 14,90</h5>
                 </div>
-                <div class="opcao" id="prato3" onclick="selecionarPrato(this.id)">
-                    <img src="imagens/frango_yin_yang 1.png"/>
-                    <h4 id="nomeprato3">Frango Yin Yang</h4>
-                    <div><p>Um pouco de batata, um poudo de salada</p></div>
-                    <h5 id="preçoprato3">R$ 14,90</h5>
+                <div class="opcao prato" onclick="selecionar(this)" id="prato3" data-identifier="food-option">
+                    <img src="imagens/feijoada.jpeg"/>
+                    <h4 id="nomeprato3" data-identifier="food-title">Feijoada</h4>
+                    <div><p>Clássica feijoada,<br>acompanha arroz.</p></div>
+                    <h5 id="preçoprato3" data-identifier="food-price">R$ 24,90</h5>
                 </div>
-                <div class="opcao" id="prato4" onclick="selecionarPrato(this.id)">
-                    <img src="imagens/frango_yin_yang 1.png"/>
-                    <h4 id="nomeprato4">Frango Yin Yang</h4>
-                    <div><p>Um pouco de batata, um poudo de salada</p></div>
-                    <h5 id="preçoprato4">R$ 14,90</h5>
+                <div class="opcao prato" onclick="selecionar(this)" id="prato4" data-identifier="food-option">
+                    <img src="imagens/omelete.jpeg"/>
+                    <h4 id="nomeprato4" data-identifier="food-title">Omelete</h4>
+                    <div><p>Omelete com 3 ovos, presunto e queijo.</p></div>
+                    <h5 id="preçoprato4" data-identifier="food-price">R$ 12,90</h5>
                 </div>
-                <div class="opcao" id="prato5" onclick="selecionarPrato(this.id)">
-                    <img src="imagens/frango_yin_yang 1.png"/>
-                    <h4 id="nomeprato5">Frango Yin Yang</h4>
-                    <div><p>Um pouco de batata, um poudo de salada</p></div>
-                    <h5 id="preçoprato5">R$ 14,90</h5>
+                <div class="opcao prato" onclick="selecionar(this)" id="prato5" data-identifier="food-option"> 
+                    <img src="imagens/Bife parmegiana.jpeg"/>
+                    <h4 id="nomeprato5" data-identifier="food-title">Bife à parmegiana</h4>
+                    <div><p>Contra-filé à parmegiana.</p></div>
+                    <h5 id="preçoprato5" data-identifier="food-price">R$ 24,90</h5>
                 </div>
             </div>
         </div>
@@ -54,35 +54,35 @@
         <div class="bebidas">
             <h3>Agora, sua bebida</h3>
             <div class="opcoes" data-identifier="drinks" id="opcoesBebidas">
-                    <div class="opcao primeiro" id="bebida1" onclick="selecionarBebida(this.id)">
+                    <div class="opcao primeiro bebida" onclick="selecionar(this)" id = "bebida1" data-identifier="food-option">
                         <img src="imagens/coquinha_gelada 1.png"/>
-                        <h4 id="nomebebida1">Coquinha gelada</h4>
+                        <h4 id="nomebebida1" data-identifier="food-title">Coquinha gelada</h4>
                         <div><p>Lata 350ml</p></div>
-                        <h5 id="preçobebida1">R$ 4,90</h5>
+                        <h5 id="preçobebida1" data-identifier="food-price">R$ 4,90</h5>
                     </div>
-                    <div class="opcao" id="bebida2" onclick="selecionarBebida(this.id)">
-                        <img src="imagens/coquinha_gelada 1.png"/>
-                        <h4 id="nomebebida2">Coquinha gelada</h4>
+                    <div class="opcao bebida" onclick="selecionar(this)" id="bebida2" data-identifier="food-option">
+                        <img src="imagens/guarana.jpeg"/>
+                        <h4 id="nomebebida2" data-identifier="food-title">Guaraná Antarctica</h4>
                         <div><p>Lata 350ml</p></div>
-                        <h5 id="preçobebida2">R$ 4,90</h5>
+                        <h5 id="preçobebida2" data-identifier="food-price">R$ 4,90</h5>
                     </div>
-                    <div class="opcao" id="bebida3" onclick="selecionarBebida(this.id)">
-                        <img src="imagens/coquinha_gelada 1.png"/>
-                        <h4 id="nomebebida3">Coquinha gelada</h4>
+                    <div class="opcao bebida" onclick="selecionar(this)" id="bebida3" data-identifier="food-option">
+                        <img src="imagens/fantalaranja.jpeg"/>
+                        <h4 id="nomebebida3" data-identifier="food-title">Fanta laranja</h4>
                         <div><p>Lata 350ml</p></div>
-                        <h5 id="preçobebida3">R$ 4,90</h5>
+                        <h5 id="preçobebida3" data-identifier="food-price">R$ 4,90</h5>
                     </div>
-                    <div class="opcao" id="bebida4" onclick="selecionarBebida(this.id)">
-                        <img src="imagens/coquinha_gelada 1.png"/>
-                        <h4 id="nomebebida4">Coquinha gelada</h4>
-                        <div><p>Lata 350ml</p></div>
-                        <h5 id="preçobebida4">R$ 4,90</h5>
+                    <div class="opcao bebida"  onclick="selecionar(this)" id="bebida4" data-identifier="food-option">
+                        <img src="imagens/agua sem gas.jpeg"/>
+                        <h4 id="nomebebida4" data-identifier="food-title">Água sem gás</h4>
+                        <div><p>Garrafa 500ml</p></div>
+                        <h5 id="preçobebida4" data-identifier="food-price">R$ 1,90</h5>
                     </div>
-                    <div class="opcao" id="bebida5" onclick="selecionarBebida(this.id)">
-                        <img src="imagens/coquinha_gelada 1.png"/>
-                        <h4 id="nomebebida5">Coquinha gelada</h4>
+                    <div class="opcao bebida" onclick="selecionar(this)" id="bebida5" data-identifier="food-option">
+                        <img src="imagens/eisenbahn.jpeg"/>
+                        <h4 id="nomebebida5" data-identifier="food-title">Eisenbahn</h4>
                         <div><p>Lata 350ml</p></div>
-                        <h5 id="preçobebida5">R$ 4,90</h5>
+                        <h5 id="preçobebida5" data-identifier="food-price">R$ 4,90</h5>
                     </div>
             </div>
         </div>
@@ -90,36 +90,24 @@
         <div class="sobremesas">
             <h3>Por fim, sua sobremesa</h3>
             <div class="opcoes" data-identifier="desserts" id="opcoesSobremesas">
-                <div class="opcao primeiro" id="sobremesa1" onclick="selecionarSobremesa(this.id)">
+                <div class="opcao primeiro sobremesa" onclick="selecionar(this)" id="sobremesa1" data-identifier="food-option">
                     <img src="imagens/pudim 1.png"/>
-                    <h4 id="nomesobremesa1">Pudim</h4>
+                    <h4 id="nomesobremesa1" data-identifier="food-title">Pudim</h4>
                     <div><p>Apenas pudim</p></div>
-                    <h5 id="preçosobremesa1">R$ 7,90</h5>
+                    <h5 id="preçosobremesa1" data-identifier="food-price">R$ 7,90</h5>
                 </div>
 
-                <div class="opcao" id="sobremesa2" onclick="selecionarSobremesa(this.id)">
-                    <img src="imagens/pudim 1.png"/>
-                    <h4 id="nomesobremesa2">Pudim</h4>
-                    <div><p>Apenas pudim</p></div>
-                    <h5 id="preçosobremesa2">R$ 7,90</h5>
+                <div class="opcao sobremesa"  onclick="selecionar(this)" id="sobremesa2" data-identifier="food-option">
+                    <img src="imagens/delicia-abacaxi.jpeg"/>
+                    <h4 id="nomesobremesa2" data-identifier="food-title">Delícia de abacaxi</h4>
+                    <div><p>Doce delícia de abacaxi</p></div>
+                    <h5 id="preçosobremesa2" data-identifier="food-price">R$ 5,90</h5>
                 </div>
-                <div class="opcao" id="sobremesa3" onclick="selecionarSobremesa(this.id)">
-                    <img src="imagens/pudim 1.png"/>
-                    <h4 id="nomesobremesa3">Pudim</h4>
-                    <div><p>Apenas pudim</p></div>
-                    <h5 id="preçosobremesa3">R$ 7,90</h5>
-                </div>
-                <div class="opcao" id="sobremesa4" onclick="selecionarSobremesa(this.id)">
-                    <img src="imagens/pudim 1.png"/>
-                    <h4 id="nomesobremesa4">Pudim</h4>
-                    <div><p>Apenas pudim</p></div>
-                    <h5 id="preçosobremesa4">R$ 7,90</h5>
-                </div>
-                <div class="opcao" id="sobremesa5" onclick="selecionarSobremesa(this.id)">
-                    <img src="imagens/pudim 1.png"/>
-                    <h4 id="nomesobremesa5">Pudim</h4>
-                    <div><p>Apenas pudim</p></div>
-                    <h5 id="preçosobremesa5">R$ 7,90</h5>
+                <div class="opcao sobremesa"  onclick="selecionar(this)" id="sobremesa3" data-identifier="food-option">
+                    <img src="imagens/sorveteMagnum.png"/>
+                    <h4 id="nomesobremesa3" data-identifier="food-title">Sorvete Magnum</h4>
+                    <div><p>Pote Clássico 440ml</p></div>
+                    <h5 id="preçosobremesa3" data-identifier="food-price">R$ 14,90</h5>
                 </div>
             </div>
         </div>
@@ -133,16 +121,16 @@
         </div>
 
         <div class="off" id="confirmarDados">
-            <div class="box-confirmar">
-                <h6>Confirme seu pedido</h6>
-                <p id="nomePratoConfirma">Frango Yin Yang</p>
-                <p id="precoPratoConfirma">14,90</p>
-                <p id="nomeBebidaConfirma">Coquinha gelada</p>
-                <p id="precoBebidaConfirma">4,90</p>
-                <p id="nomeSobremesaConfirma">Pudim</p>
-                <p id="precoSobremesaConfirma">7,90</p>
+            <div class="box-confirmar" data-identifier="confirmation-dialog">
+                <h6>Confirme seu pedido</h6>|
+                <p id="nomePratoConfirma"></p>
+                <p id="precoPratoConfirma"></p>
+                <p id="nomeBebidaConfirma"></p>
+                <p id="precoBebidaConfirma"></p>
+                <p id="nomeSobremesaConfirma"></p>
+                <p id="precoSobremesaConfirma"></p>
                 <h6 id="total">TOTAL</h6>
-                <h6 id="precoTotal">R$ 27,70</h6>
+                <h6 id="precoTotal"></h6>
                 <a href="" target="_blank" id="linkWhatsapp">
                     <div class="botaoConfirmaDados">
                         <h6>Tudo certo, pode pedir!</h6>
